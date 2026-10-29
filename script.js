@@ -135,17 +135,3 @@ tiles.forEach((tile, index) => {
     tile.addEventListener("click", () => handleTileClick(index));
 });
 
-resetButton.addEventListener("click", () => {
-    board = ["", "", "", "", "", "", "", "", ""];
-    gameActive = true;
-    currentPlayer = "X";
-
-    tiles.forEach(tile => {
-        tile.textContent = "";
-        tile.classList.remove("playerX", "playerO");
-    });
-
-    updateDisplay();
-});
-
-updateDisplay();
